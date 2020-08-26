@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum Colors {
+    case red
+    case yellow
+    case green
+}
+
 class ViewController: UIViewController {
     
     // MARK: Light outlets
@@ -18,12 +24,15 @@ class ViewController: UIViewController {
     // MARK: Button outlets
     @IBOutlet weak var button: UIButton!
     
+    var color = Colors.red
+    var light: CGFloat = 1
+    var dark: CGFloat = 0.3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         button.layer.cornerRadius = 10
         view.backgroundColor = .black
         configureLightViews()
-        setStartAlpha()
     }
     
     // MARK: Button actions
@@ -33,16 +42,10 @@ class ViewController: UIViewController {
     
     // MARK: Configuration
     private func configureLightViews() {
-        let height = redLightView.layer.frame.size.height
+        let height = redLightView.layer.frame.height
         redLightView.layer.cornerRadius = height / 2
         yellowLightView.layer.cornerRadius = height / 2
         greenLightView.layer.cornerRadius = height / 2
-    }
-    
-    private func setStartAlpha() {
-        redLightView.alpha = 0.3
-        yellowLightView.alpha = 0.3
-        greenLightView.alpha = 0.3
     }
     
     // MARK: Switch logic
@@ -52,18 +55,19 @@ class ViewController: UIViewController {
     }
     
     private func switchLight() {
-        if redLightView.alpha == 1 {
-            redLightView.alpha = 0.3
-            yellowLightView.alpha = 1
-            greenLightView.alpha = 0.3
-        } else if yellowLightView.alpha == 1 {
-            yellowLightView.alpha = 0.3
-            redLightView.alpha = 0.3
-            greenLightView.alpha = 1
-        } else {
-            redLightView.alpha = 1
-            yellowLightView.alpha = 0.3
-            greenLightView.alpha = 0.3
+        switch color {
+        case .red:
+            redLightView.alpha = light
+            greenLightView.alpha = dark
+            color = .yellow
+        case .yellow:
+            yellowLightView.alpha = light
+            redLightView.alpha = dark
+            color = .green
+        case .green:
+            greenLightView.alpha = light
+            yellowLightView.alpha = dark
+            color = .red
         }
     }
 }

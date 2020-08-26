@@ -18,19 +18,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="CpI-tv-o4s">
                                 <rect key="frame" x="122" y="74" width="170" height="546"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="03T-3W-1k2">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="03T-3W-1k2">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aas-Tv-JRN">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aas-Tv-JRN">
                                         <rect key="frame" x="0.0" y="188" width="170" height="170"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNs-Ff-kRp">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNs-Ff-kRp">
                                         <rect key="frame" x="0.0" y="376" width="170" height="170"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CpI-tv-o4s" secondAttribute="height" multiplier="85:273" id="d2n-7G-SJB"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFf-lF-acb">
                                 <rect key="frame" x="97" y="710" width="220" height="57"/>
@@ -49,13 +52,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CpI-tv-o4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="QhS-aZ-4vl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CpI-tv-o4s" secondAttribute="trailing" constant="122" id="Rtx-Ie-xAD"/>
-                            <constraint firstItem="KFf-lF-acb" firstAttribute="top" secondItem="CpI-tv-o4s" secondAttribute="bottom" constant="90" id="WH9-aS-FCO"/>
+                            <constraint firstItem="KFf-lF-acb" firstAttribute="top" secondItem="CpI-tv-o4s" secondAttribute="bottom" constant="90" id="2fO-Ts-e9K"/>
                             <constraint firstItem="KFf-lF-acb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="ezg-xf-Fps"/>
-                            <constraint firstItem="CpI-tv-o4s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="fsm-iP-UTf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFf-lF-acb" secondAttribute="trailing" constant="97" id="kRM-Gt-3az"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KFf-lF-acb" secondAttribute="bottom" constant="95" id="nc2-RK-g3r"/>
+                            <constraint firstItem="CpI-tv-o4s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qCG-Ts-n2Y"/>
+                            <constraint firstItem="CpI-tv-o4s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="vtQ-oT-f8k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
